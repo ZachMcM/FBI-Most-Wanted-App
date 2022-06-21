@@ -1,0 +1,21 @@
+officesList = [
+  'Albany',       'Albuquerque',    'Anchorage',
+  'Atlanta',      'Baltimore',      'Birmingham',
+  'Boston',       'Buffalo',        'Charlotte',
+  'Chicago',      'Cincinnati',     'Cleveland',
+  'Columbia',     'Dallas',         'Denver',
+  'Detroit',      'El Paso',        'Honolulu',
+  'Houston',      'Indianapolis',   'Jackson',
+  'Jacksonville', 'Kansas City',    'Knoxville',
+  'Las Vegas',    'Little Rock',    'Los Angeles',
+  'Louisville',   'Memphis',        'Miami',
+  'Milwaukee',    'Minneapolis',    'Mobile',
+  'New Haven',    'New Orleans',    'New York',
+  'Newark',       'Norfolk',        'Oklahoma City',
+  'Omaha',        'Philadelphia',   'Phoenix',
+  'Pittsburgh',   'Portland',       'Richmond',
+  'Sacramento',   'Salt Lake City', 'San Antonio',
+  'San Diego',    'San Francisco',  'San Juan',
+  'Seattle',      'Springfield',    'St. Louis',
+  'Tampa',        'Washington'
+]

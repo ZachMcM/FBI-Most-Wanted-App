@@ -87,75 +87,28 @@ function displayWanted(items) {
         const wantedName = document.createElement("h2")
         const nameContent = document.createTextNode('Name: ' + wanted.title)
         wantedName.appendChild(nameContent)
+        cardContent.appendChild(wantedName)
 
-        //aliases 
-        const wantedAliases = document.createElement("p")
-        const aliasesContent = document.createTextNode("Aliases: " + wanted.aliases)
-        wantedAliases.appendChild(aliasesContent)
+        //the variable that stores the name of the item being displayed
+        let itemName
 
-        //height 
-        const wantedHeight = document.createElement('p')
-        const heightContent = document.createTextNode('Max Height: ' + wanted.height_max + ' inches Min Height: ' + wanted.height_min + ' inches')
-        wantedHeight.appendChild(heightContent)
-
-        //weight 
-        const wantedWeight = document.createElement('p')
-        const weightContent = document.createTextNode('Weight: ' + wanted.weight)
-        wantedWeight.appendChild(weightContent)
-
-        //age range
-        const wantedAge = document.createElement('p')
-        const ageContent = document.createTextNode('Age Range: ' + wanted.age_range)
-        wantedAge.appendChild(ageContent)
-
-        //location
-        const wantedLocation = document.createElement('p')
-        const locationContent = document.createTextNode('Possible Countries: ' + wanted.possible_countries + ' Possible States: ' + wanted.possible_states)
-        wantedLocation.appendChild(locationContent)
-
-        //scars and marks
-        const wantedMarks = document.createElement('p')
-        const marksContent = document.createTextNode('Scars and Marks: ' + wanted.scars_and_marks)
-        wantedMarks.appendChild(marksContent)
-
-        //subject 
-        const wantedSubject = document.createElement('p')
-        const subjectContent = document.createTextNode('Subject: ' + wanted.subject)
-        wantedSubject.appendChild(subjectContent)        
-
-        //warning 
-        const wantedWarning = document.createElement('p')
-        const warningContent = document.createTextNode('Warning: ' + wanted.warning)
-        wantedWarning.appendChild(warningContent)
-
-        //description 
-        const wantedDescription = document.createElement('p')
-        const descriptionContent = document.createTextNode('Description: ' + wanted.description)
-        wantedDescription.appendChild(descriptionContent)
-
-        //reward
-        const wantedReward = document.createElement('p')
-        const rewardContent = document.createTextNode('Reward: ' + wanted.reward_text)
-        wantedReward.appendChild(rewardContent)
+        //calls function that adds items to document
+        addItem('Aliases: ' + wanted.aliases, cardContent)
+        addItem('Max Height: ' + wanted.height_max + ' inches Min Height: ' + wanted.height_min + ' inches', cardContent)
+        addItem('Weight: ' + wanted.weight, cardContent)
+        addItem('Age Range: ' + wanted.age_range, cardContent)
+        addItem('Possible Countries: ' + wanted.possible_countries + ' Possible States: ' + wanted.possible_states, cardContent)
+        addItem('Scars and Marks: ' + wanted.scars_and_marks, cardContent)
+        addItem('Subject: ' + wanted.subject, cardContent)
+        addItem('Warning: ' + wanted.warning, cardContent)
+        addItem('Description: ' + wanted.description, cardContent)
+        addItem('Reward: ' + wanted.reward_text, cardContent)
 
         //url
         const url = document.createElement('a')
         const urlContent = document.createTextNode('More Info ›')
         url.appendChild(urlContent)
         url.href = wanted.url
-        
-        //appends everything to card content div
-        cardContent.appendChild(wantedName)
-        cardContent.appendChild(wantedAliases)
-        cardContent.appendChild(wantedHeight)
-        cardContent.appendChild(wantedWeight)
-        cardContent.appendChild(wantedAge)
-        cardContent.appendChild(wantedLocation)
-        cardContent.appendChild(wantedMarks)
-        cardContent.appendChild(wantedSubject)
-        cardContent.appendChild(wantedWarning)
-        cardContent.appendChild(wantedDescription)
-        cardContent.appendChild(wantedReward)
         cardContent.appendChild(url)
 
         //appends everything to card
@@ -165,5 +118,12 @@ function displayWanted(items) {
         //appends card to container
         wantedContainer.appendChild(wantedCard)
     });
+}
+
+function addItem(content, cardContent) {
+    const wantedElement = document.createElement('p')
+    const wantedContent = document.createTextNode(content)
+    wantedElement.appendChild(wantedContent)
+    cardContent.appendChild(wantedElement)
 }
 
